@@ -32,7 +32,7 @@ Opcode (FMT) | Mnemonic            | Description
 0x05 (iA)    | MOD                 | x = pop(); push(pop() % x);
 0x06 (iA)    | NEG                 | push(-pop());
 0x07 (iA)    | NOT                 | push(~pop());
-0x08 (iA)    | OR                  | x = pop(); push(pop() \| x));
+0x08 (iA)    | OR                  | x = pop(); push(pop() \| x);
 0x09 (iA)    | AND                 | x = pop(); push(pop() & x);
 0x0A (iA)    | XOR                 | x = pop(); push(pop() ^ x);
 0x0B (iA)    | SHL                 | x = pop(); push(pop() << x);
