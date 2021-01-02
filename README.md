@@ -47,10 +47,12 @@ Opcode (FMT) | Mnemonic            | Description
 0x14 (iB)    | JMPREL op1          | IP += op1;
 0x15 (iB)    | JMPF op1            | if (!pop()) { IP = op1 };
 0x16 (iB)    | JMPT op1            | if (pop()) { IP = op1 };
+0x16 (iB)    | JMPFREL op1         | if (!pop()) { IP += op1 };
+0x16 (iB)    | JMPTREL op1         | if (pop()) { IP += op1 };
 0x17 (iB)    | IMM op1             | push(op1)
 0x18 (iB)    | INV op1             | save_pc() save_bp() pc = op1
 0x19 (iB)    | INVREL op1          | save_pc() save_bp() pc += op1
 0x1A (iB)	 | CPY op1		       | push(bp + op1)
 0x1B (iB)    | ARG op1             | args = op1
 0x1C (iB)    | REP op1             | push(bp + op1)
-0x1D (iA)    | RET                 | x = pop(); sp = sp - args; ip = pop(); bp = pop(); push(x); 
+0x1D (iA)    | RET                 | x = pop(); sp = bp; ip = pop(); bp = pop(); sp -= args; push(x); 
