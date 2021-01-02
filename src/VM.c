@@ -192,9 +192,10 @@ void VM_step(VM* vm) {
         break;
     case RET:
         a = VM_pop(vm);
-        vm->regs[SP] = vm->regs[SP] - vm->args + 2; 
+        vm->regs[SP] = vm->regs[BP]; 
         vm->regs[IP] = VM_pop(vm);
         vm->regs[BP] = VM_pop(vm);
+        vm->regs[SP] -= vm->args;
         VM_push(vm, a);
         break;
     default:
