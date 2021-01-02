@@ -1,0 +1,3 @@
+IMM 10
+NEG
+HLT
