@@ -1,6 +1,6 @@
 # StratusVM
 
-*StratusVM* is a virtualized instructional model of a computer which models a von Neumann architecture computer. 
+*StratusVM* is an easily extensible virtual instructional machine which models a von Neumann architecture computer. 
 
 ## Specification
 
